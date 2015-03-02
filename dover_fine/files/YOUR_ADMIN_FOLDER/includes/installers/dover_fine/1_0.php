@@ -82,16 +82,16 @@ $db->Execute("UPDATE " . TABLE_CONFIGURATION . " SET configuration_value = 0 WHE
 $db->Execute("INSERT IGNORE INTO " . TABLE_CONFIGURATION . " (configuration_id, configuration_title, configuration_key, configuration_value, configuration_description, configuration_group_id, sort_order, date_added, use_function, set_function) VALUES 
 (NULL, '<b>ACTIVATE Responsive Template</b>', 'COLUMN_WIDTH', '1', 'Column Width - Left Boxes &<br /> Column Width - Right Boxes<br /><b>DO NOT WORK WITH</b><br />(1)Responsive Template Settings<br /><br /><b>Use</b><br />Column Width - Left &<br /> Column Width - Right<br /><br /><br /> 0 = Use Default Template Settings<br />1 = Use Responsive Template Settings<br />', '19', NULL, NOW(), NULL, 'zen_cfg_select_option(array(\'0\', \'1\'),');");
 
-$sql=mysql_query(
-		 "SELECT show_box_min_width FROM . TABLE_LAYOUT_BOXES . ");
+global $db;
+$sql = "SELECT * from " . TABLE_LAYOUT_BOXES . " LIMIT 1";
+$result = $db->Execute($sql);
+$value = $result->fields['show_box_min_width'];
+$type = gettype($value);
+if ($type == 'NULL'){
 
-if (!$sql){
+$db->Execute("ALTER TABLE " . TABLE_LAYOUT_BOXES  . " ADD show_box_min_width TINYINT( 1 ) NOT NULL DEFAULT '1' AFTER layout_box_status_single;");
 
-  mysql_query("ALTER TABLE " . TABLE_LAYOUT_BOXES . " ADD show_box_min_width TINYINT( 1 ) NOT NULL DEFAULT '1' AFTER layout_box_status_single;");
-
-
-}ELSE{
- }
+}
 
 // Layout Boxes
 $db->Execute("INSERT IGNORE INTO " . TABLE_LAYOUT_BOXES . "   (layout_id, layout_template, layout_box_name, layout_box_status, layout_box_location, layout_box_sort_order, layout_box_sort_order_single, layout_box_status_single, show_box_min_width) VALUES
@@ -174,7 +174,7 @@ $configuration_group_id = $db->Insert_ID();
 $db->Execute("UPDATE " . TABLE_CONFIGURATION_GROUP . " SET sort_order = " . $configuration_group_id . " WHERE configuration_group_id = " . $configuration_group_id . ";");
 
 $db->Execute("INSERT IGNORE INTO " . TABLE_CONFIGURATION . " (configuration_title, configuration_key, configuration_value, configuration_description, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES
-            ('Version', 'DOVER_FINE_VERSION', '1.0', 'Version installed:', " . $configuration_group_id . ", 0, NOW(), NOW(), NULL, NULL),
+            ('Version', 'DOVER_FINE_VERSION', '1.1', 'Version installed:', " . $configuration_group_id . ", 0, NOW(), NOW(), NULL, NULL),
 	    ('Banner Display Groups Custom Tab', 'SHOW_BANNERS_GROUP_SETCUSTOMTAB', 'Custom Tab', 'Custom Tab for product info page', " . $configuration_group_id . ", 2, NOW(), NOW(), NULL, NULL);");
 
-$messageStack->add('Installed Dover Fine Template v1.0', 'success');
+$messageStack->add('Installed Dover Fine Template v1.1', 'success');
