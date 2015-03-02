@@ -1,0 +1,867 @@
+<!--Force IE6 into quirks mode with this comment tag-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Dover Fine Free Zen Cart Template</title>
+<style type="text/css">
+
+body{margin: 0;padding: 0;border: 0;overflow: hidden;height: 100%;max-height: 100%;font-family: "Century Gothic", sans-serif;color:#666;}
+a:hover{color:#60bbfb;}
+#framecontent{position: absolute;top: 0;left: 0;width: 100%;height: 180px; overflow: visible;background-color: #fff;color: #444;}
+#maincontent{position: fixed;top: 180px;left: 0;right: 0;bottom: 0;overflow: auto;background: #fff;border-top:5px solid #3f3830;font-size:90%;z-index:-1;}
+.innertube{margin: 15px; /*Margins for inner DIV inside each DIV (to provide padding)*/width:950px;margin:0 auto;}
+* html body{ /*IE6 hack*/padding: 130px 0 0 0; /*Set value to (HeightOfFrameDiv 0 0 0)*/}
+* html #maincontent{ /*IE6 hack*/height: 100%;width: 100%;}
+#maincontent a{text-decoration:none;color:#332c26;}
+#top-menu{background:#3f3830;}
+.dd_menu {padding:0px; width:950px;margin:0 auto; list-style-type:none; height:30px;}
+.dd_menu li {float:left; height:30px; border-right: solid 1px #767574;}
+.dd_menu li a {padding:9px 20px; display:block; color:#fffffd; text-decoration:none; font:12px arial, verdana, sans-serif; font-weight: bold;}
+.dd_menu li:hover a {text-decoration:none;color:#444443;}
+.dd_menu ul{position:absolute; left:-9999px; top:-9999px; list-style-type:none;}
+.dd_menu li:hover {position:relative; background:#ebecf0;}
+.dd_menu li:hover ul {left:0px; top:30px; background:#ebecf0; padding:3px; border:1px solid grey; width:250px;}
+.dd_menu li:hover ul li {height:28px; border:none;}
+.dd_menu li:hover ul li a {height:18px; padding:0px; display:block; font-size:11px; width:250px; line-height:18px; text-indent:5px; color:#444; background-color:#ebecf0; text-decoration:none; border:1px solid transparent;}
+.dd_menu li:hover ul li a:hover {height:28px; background:#3f3830; color:#fff; border:solid 0px #444;}
+.dd_menu li ul ul {margin: -2em 0 0 15em;}
+.dd_menu li:hover ul ul, .dd_menu li.sfhover ul ul {left: -999em;}
+.dd_menu li:hover ul, .dd_menu li li:hover ul, .dd_menu li.sfhover ul, .dd_menu li li.sfhover ul {left: auto;}
+.wrapper{border-bottom:1px solid #ccc;padding-bottom:20px;}
+#demo-shots{float:right;width:375px;margin-top:-15px;margin-bottom:15px;}
+.clearBoth{clear:both;}
+.left{float:left; width:450px;line-height:25px;}
+h1{font-size:22px;font-weight:400;line-height:28px;}
+h1 a{color:#444;text-decoration:none;}
+.border-left{border-bottom:1px solid #ccc;padding-left:15px;padding-bottom:5px;width:50%;margin-bottom:20px;margin-top:20px;padding-bottom:20px;}
+.border-left1{border-bottom:1px solid #ccc;padding-left:15px;padding-bottom:5px;}
+.icons{text-align:center;line-height:20px;margin-top:30px;margin-bottom:30px;}
+.icon-inner{text-align:center;line-height:20px;width:250px;float:left;margin-right:60px;}
+.centered-text, .center{text-align:center;}
+.centered-text img{margin-bottom:15px;}
+.bigger{font-size:120%;}
+.grey{background:#eaeaea;padding:20px;min-height:125px; -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px;margin-bottom:25px;}
+.right{width:400px;float:right;}
+.brown{float:left;padding:5px 10px; -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px;background:#2e2820;}
+.green{float:right;padding:5px 10px; -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px;background:#4f7931;}
+.green-video{padding:10px 15px; -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px;background:#4f7931;width:500px;text-align:center;}
+.green-donation{padding:10px 15px; -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px;background:#4f7931;width:350px;text-align:center;}
+.green-donation:hover, .green-video:hover, .brown:hover,.green:hover {background:#931414;}
+#maincontent .white a{color:#fffffd;}
+#table{background:#eaeaeb;-moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px;}
+.white-bk{background:#fff;padding:20px;-moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px;}
+.red{color:#931413;}
+.php-black{color:#000;}
+.php-green{color:#118542;}
+.php-blue{color:#0012ff;}
+.youtube{-moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px;}
+</style>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>	
+
+</head>
+
+<body>
+
+<div id="framecontent">
+<div class="innertube">
+<a href="#top"><img src="http://www.picaflor-azul.com/pica/install/logo.jpg" alt="logo" /></a>
+</div>
+
+
+<div id="top-menu">
+<ul class="dd_menu">
+<li><a href="#seven">Features</a></li>
+<li><a href="#one">Support/Help</a></li>
+<li><a href="#two">Installation</a>
+<ul>
+		<li><a href="#ione">Pre-Installation (Don't Skip This!)</a>
+		  <ul>
+		    <li><a href="#ione">Backup Files & Database</a></li>
+		    <li><a href="#pre-one">Prepare Package for Upload</a></li>
+		  </ul>
+		</li>
+		<li><a href="#itwo">Step 1:  Upload the Files</a></li>
+		 <li><a href="#ifour">Step 2: Select the Template</a></li>
+		<li><a href="#ifive">Step 3: Reset Sideboxes</a></li>
+		<li><a href="#ieight">Add Your Logo</a></li>
+		<li><a href="#inine">Add Your Tag Line</a></li>
+		<li><a href="#iten">Home Page Slideshow</a>
+		  <ul>
+		    <li><a href="#ieleven">Add Your Images and Links</a></li>
+		    <li><a href="#sstwo">Disable the Slide Show</a></li>
+		  </ul>
+		</li>
+		<li><a href="#ftwo">Social Media Links</a></li>
+		<li><a href="#ififteen-c">Product Info Page Tabs</a></li>
+		<li><a href="#ififteen">Un-Install Instrutions</a></li>
+		<li><a href="#isixteen">Included Files</a></li>
+		<li><a href="#iseventeen">Easy Help Zen Cart Tutorials Index</a></li>
+</ul>
+</li>
+<li><a href="#four">Credits &amp; License</a></li>
+<li><a href="#five">Download Our Other Free Templates</a></li>
+<li><a href="#six">Bugs &amp; Updates</a></li>
+</ul>
+</div>
+
+</div>
+
+
+<div id="maincontent">
+<div class="innertube">
+
+
+<div class="wrapper">
+<div class="left">
+<div class="border-left1">
+       <h1 id="top">Dover Fine Free Template</h1>
+Version: 1.0
+<br />
+<a href="http://www.picaflor-azul.com" target="_blank">Designed by Picaflor Azul Zen Cart Design</a>
+</div>
+<table class="icons" cellpadding="10">
+<tr>
+<td>
+<a href="http://zenlyzen.com/dover" target="_blank"><img src="http://www.picaflor-azul.com/pica/install/demo.png" alt="demo" /><br />Live Demo</a>
+</td>
+<td>
+<a href="http://www.zen-cart.com/showthread.php?213494-Dover-Fine-Responsive-Template"  target="_blank"><img src="http://www.picaflor-azul.com/pica/install/support.png" alt="support" /><br />Support</a>
+</td>
+<td>
+<a href="http://www.picaflor-azul.com/demos/install/readme/dover_fine_readme.html"  target="_blank"><img src="http://www.picaflor-azul.com/pica/install/online-readme.png" alt="online readme" /><br />Live Readme</a>
+</td>
+<td>
+<a href="http://www.facebook.com/Custom.Zen.Cart.Design?sk=photos"  target="_blank"><img src="http://www.picaflor-azul.com/pica/install/fan-gallery.png" alt="fan gallery" /><br />Fan Gallery</a>
+</td>
+</tr>
+</table>
+<div class="grey">
+<p><a href="http://www.picaflor-azul.com/index.php?main_page=product_free_shipping_info&amp;cPath=159&amp;products_id=14857" target="_blank" >Donations are not required, but any size donation is greatly appreciated and accepted.</a>
+</p>
+<p class=" bigger white green-donation"><a href="http://www.picaflor-azul.com/index.php?main_page=product_free_shipping_info&amp;cPath=159&amp;products_id=14857"  target="_blank">Click here to make a donation.</a></p>
+<p>
+If you don't feel comfortable installing or customizing the template please feel free to contact me at <a href="mailto:info@picaflor-azul.com">info@picaflor-azul.com</a>.
+</p>
+</div>
+</div>
+<div id="demo-shots">
+<br /><br />
+<a href="http://zenlyzen.com/responsive_demo"  target="_blank"><img src="http://www.picaflor-azul.com/pica/install/dover_fine.jpg" alt="demo"  /></a>
+</div>
+<br class="clearBoth" />
+<a href="http://www.youtube.com/user/ZenCartEasyHelp"  target="_blank" ><img class="subscribe" src="http://www.picaflor-azul.com/pica/install/subscribe.png" class="youtube" /></a>
+</div>
+
+
+<div class="wrapper">
+<div class="border-left">
+<h1 id="seven">Features</h1>
+Modern Responsive Design
+</div>
+<div class="grey">
+				<ul>
+			<li>Super flexible design perfect for all types of ecommerce stores--the possibilities are endless!</li>
+			<li>Super easy 3 step install!</li>
+			<li>Responsive 2 column, full width layout</li>
+			<li>Optimized Drop Down Navigation for hand held devices</li>
+			<li>Matching CSS icons included</li>
+			<li>CSS Buttons for easier multi language implementation</li>
+			<li>Responsive Full Screen Home Page slideshow included</li>
+			<li>Add your slide show images, set their links, enable/disable images/links, and set open in new window easily, and add captions using the admin banner manager. </li>
+			<li>Add This social bookmarking added to all product pages (includes Facebook like button, Twitter Tweet Button, Pinterest Pin it button, and 300+ Sharing Services)</li>
+			<li>Customized product info page layout</li>
+			<li>Tabbed product description, details, reviews, and a custom tab (ad your content using the banner manager) which converts automatically to accodions on hand held devices</li>
+			<li>Product reviews show on the product info page</li>
+			<li>"View All" option on the product listing pages</li>
+			<li>Cross Browser tested in Firefox, IE11, IE10, IE9, IE8, Google Chrome, Opera, and Safari.</li>
+			<li>Tested on the iPhone 5 with Mobile Safari 6.0; iPad 4 with Mobile Safari 6.0; Windows Phone 8 with IE10 Mobile; Blackberry Bold 9900 with Blackberry Browser 9900; and Android Nexus 4 with Chrome Mobile 18, Dolphin Mobile 9.3, Firefox Mobile 19, Marathon Mobile 4, Opera Mobile 12, Sleipnir Mobile 2.9 , HTC One, Nokia Lumia 920, Google Nexus 7, Apple iPad Mini, Kindle</li>
+			<li>W3C Valid XHTML and CSS</li>
+			<li>Comes with the following modules installed:  Column Layout Grid, About Us Page, Back to Top, Bestsellers Thumbnails, Easy Responsive Tabs, DG Reveiws on Product Info Page, Contact Us Add Subject, Supersized Full Screen Slideshow, Flyout Sidebar Category Menu</li>
+			<li>Detailed HTML readme file with written instructions and screenshots, and links to videos for the installation and customization steps.</li>
+			<li>Fully compatible with versions 1.5x.</li>
+		</ul>
+
+</div>
+</div>
+<div class="wrapper">
+<div class="border-left">
+<h1 id="one">Support/Help</h1>
+Free or personal support
+</div>
+<div class="icons">
+<div class="icon-inner">
+<a href="http://www.zen-cart.com/showthread.php?213494-Dover-Fine-Responsive-Template"  target="_blank" ><img src="http://www.picaflor-azul.com/pica/install/support1.png" alt="support" /></a>
+<br /><br />
+<a href="http://www.zen-cart.com/showthread.php?213494-Dover-Fine-Responsive-Template"   target="_blank">Free support is available through the support thread on the Zen Cart Forum</a>.
+</div>
+<div class="icon-inner">
+<a href="http://www.picaflor-azul.com/index.php?main_page=contact_us"   target="_blank"><img src="http://www.picaflor-azul.com/pica/install/email.png" alt="email" /></a>
+<br /><br />
+<a href="http://www.picaflor-azul.com/index.php?main_page=contact_us"  target="_blank" >For direct, personal support, email us for a quote</a>.
+</div>
+<div class="icon-inner">
+<a href="http://www.picaflor-azul.com/index.php?main_page=page&amp;id=43"   target="_blank"><img src="http://www.picaflor-azul.com/pica/install/faqs.png" alt="faqs" /></a>
+<br /><br />
+<a href="http://www.picaflor-azul.com/index.php?main_page=page&amp;id=43"  target="_blank" >Before asking any questions, check our FAQ's for your answer</a>.
+</div>
+<br class="clearBoth" />
+</div>
+</div>
+
+<div class="wrapper">
+<div class="border-left">
+<h1 id="two" class="h1-color">The Complete Installation Guide</h1>
+<h1 id="ione">Pre-Installation: Backup Files & Database</h1>
+Don't skip this!
+</div>
+<div class="grey">
+
+<p class="green-video white">
+<a href="http://www.picaflor-azul.com/index.php?main_page=product_info&amp;cPath=99_106&amp;products_id=14637"   target="_blank">Watch an Easy Help Zen Cart Video Tutorial of this step HERE</a>
+</p>
+<p>
+<br />
+1. Go to your host cpanel and select the backup wizard:<br />
+<br />
+<img src="http://www.picaflor-azul.com/pica/install/backup-wizard.jpg" title="Easy Help Zen Cart Tutorial&amp;trade;:  How to Install a New Template" alt="backup wizard Easy Help Zen Cart Tutorial&amp;trade;:  How to Install a New Template" /><br />
+<br />
+2. Click on Backup:<br />
+<br />
+<img src="http://www.picaflor-azul.com/pica/images/backup-wizard-2.jpg" title="Easy Help Zen Cart Tutorial&amp;trade;:  How to Install a New Template" alt="backup wizard 2 Easy Help Zen Cart Tutorial&amp;trade;:  How to Install a New Template" /><br />
+<br />
+3. Click on Full Backup:<br />
+<br />
+<img src="http://www.picaflor-azul.com/pica/images/backup-wizard-3.jpg" title="Easy Help Zen Cart Tutorial&amp;trade;:  How to Install a New Template" alt="backup wizard 3 Easy Help Zen Cart Tutorial&amp;trade;:  How to Install a New Template" /><br />
+<br />
+4. Click on Generate Backup:<br />
+<br />
+<img src="http://www.picaflor-azul.com/pica/images/backup-wizard-4.jpg" title="Easy Help Zen Cart Tutorial&amp;trade;:  How to Install a New Template" alt="backup wizard 4 Easy Help Zen Cart Tutorial&amp;trade;:  How to Install a New Template" /><br />
+<br />
+<img src="http://www.picaflor-azul.com/pica/images/backup-wizard-5.jpg" title="Easy Help Zen Cart Tutorial&amp;trade;:  How to Install a New Template" alt="backup wizard 5 Easy Help Zen Cart Tutorial&amp;trade;:  How to Install a New Template" />
+</div>
+
+<h1 id="pre-one">Prepare the Package for Upload</h1>
+<div class="grey">
+<p>
+Unzip the template package using your favorite unzip utility.
+</p>
+<p>
+In the template package go to dover_fine/files
+</p>
+<p>
+Rename the folder YOUR_ADMIN_FOLDER to your admin folder name.
+</p>
+<p class="red">
+Back up all core file overwrites before installation:
+</p>
+<p>
+YOUR_ADMIN_FOLDER/layout_controller
+<br />
+includes/classes/split_page_results.php
+<br />
+includes/modules/pages/about_us/header_php.php
+<br />
+includes/modules/pages/featured_products/header_php.php
+<br />
+includes/modules/pages/product_reviews/header_php.php
+<br />
+includes/modules/pages/products_all/header_php.php
+<br />
+includes/modules/pages/products_new/header_php.php
+<br />
+includes/modules/pages/reviews/header_php.php
+<br />
+includes/modules/pages/specials/header_php.php
+</p>
+</div>
+</div>
+
+<div class="wrapper">
+<div class="border-left">
+	<h1 id="itwo">Step 1:  Upload the Files:</h1>
+<h1 id="uone">Method 1: FTP with Filezilla</h1>
+</div>
+
+<div class="grey">
+1.  Enter the address of the server, your username, password, and port if needed into the top of the Quickconnect bar and click on the "Quckconnect" button.<br />
+2.  Once you are connected navigate to the directory on your local machine where you unzipped the template package in the right side of window and navigate to your store root directory on your web host in the left side of the window .<br />
+3.  Select the admin, images, and includes directory.  Then right click and select "upload".  Be sure to select "overwrite" for the core overwrite files.<br />
+<br />
+<img src="http://www.picaflor-azul.com/pica/install/win-filezilla.jpg" title="Easy Help Zen Cart Tutorial&amp;trade;:  How to Install a New Template" alt="filezilla 2 Easy Help Zen Cart Tutorial&amp;trade;:  How to Install a New Template" /><br />
+</div>
+
+<div class="wrapper">
+<div class="border-left">
+	<h1 id="ifour">Step 2: Select the Template:</h1>
+</div>	
+<div class="grey">
+<p>In your Zen Cart admin go to <span class="red">Tools -> Template Selection</span>
+<br />
+<br />
+<img src="http://www.picaflor-azul.com/pica/install/template-selection.jpg" title="Easy Help Zen Cart Tutorial&amp;trade;:  How to Install a New Template" alt="template selection Easy Help Zen Cart Tutorial&amp;trade;:  How to Install a New Template" /><br />
+<br />
+Click on the "edit" button<br />
+<br />
+<img src="http://www.picaflor-azul.com/pica/install/template-select.jpg" title="Easy Help Zen Cart Tutorial&amp;trade;:  How to Install a New Template" alt="template selection edit Easy Help Zen Cart Tutorial&amp;trade;:  How to Install a New Template" /><br />
+<br />
+Select the name of the template you just installed from the drop down menu<br />
+<br />
+<img src="http://www.picaflor-azul.com/pica/install/template-select1.jpg" title="Easy Help Zen Cart Tutorial&amp;trade;:  How to Install a New Template" alt="template selection choose Easy Help Zen Cart Tutorial&amp;trade;:  How to Install a New Template" /><br />
+<br />
+Click on the "update" button.<br />
+<br />
+<img src="http://www.picaflor-azul.com/pica/install/template-selection-update.jpg" title="Easy Help Zen Cart Tutorial&amp;trade;:  How to Install a New Template" alt="template selection update Easy Help Zen Cart Tutorial&amp;trade;:  How to Install a New Template" /></p>
+</div>
+</div>
+
+<div class="wrapper">
+<div class="border-left">
+	<h1 id="ifive">Step 3: Reset the Sideboxes:</h1>
+</div>
+<div class="grey">
+<p>In your Zen Cart admin go to <span class="red">Tools -> Layout Boxes Controller</span><br />
+<br />
+<img src="http://www.picaflor-azul.com/pica/install/template-selection-layout-boxes.jpg" title="Easy Help Zen Cart Tutorial&amp;trade;:  How to Install a New Template" alt="template selection layout boxes Easy Help Zen Cart Tutorial&amp;trade;:  How to Install a New Template" /><br />
+<br />
+Scroll down to the bottom of the screen and click the "reset" button.<br />
+<br />
+<img src="http://www.picaflor-azul.com/pica/install/template-selection-reset-sideboxes.jpg" title="Easy Help Zen Cart Tutorial&amp;trade;:  How to Install a New Template" alt="template selection reset sideboxes Easy Help Zen Cart Tutorial&amp;trade;:  How to Install a New Template" /></p>
+	</div>
+</div>
+
+
+<div class="wrapper">
+<div class="border-left">
+	<h1 id="ieight">Add Your Logo:</h1>
+Brand your site
+</div>
+<div class="grey">
+<p class="white green-video">
+<a href="http://www.picaflor-azul.com/index.php?main_page=product_info&amp;cPath=99_109&amp;products_id=14573" target="_blank" >Watch an Easy Help Zen Cart Video Tutorial about this step HERE</a>
+</p>
+<p>Create your logo in your image editing program and upload it to <span class="red">includes/templates/dover_fine/images</span>.
+</p>
+<p>Open <span class="red">includes/languages/english/dover_fine/header.php</span> in a plain text editor.  Find this code on or around line 24:</p>
+<p class="white-bk"> <code class="php-black">define(</code><code class="php-blue">'HEADER_ALT_TEXT'</code><code class="php-black">, </code><code class="php-green">'Dover Fine :: Free Template by www.picaflor-azul.com'</code><code class="php-black">);<br />
+  define(</code><code class="php-blue">'HEADER_LOGO_WIDTH'</code><code class="php-black">, </code><code class="php-green">'235px'</code><code class="php-black">);<br />
+  define(</code><code class="php-blue">'HEADER_LOGO_HEIGHT'</code><code class="php-black">, </code><code class="php-green">'60px'</code><code class="php-black">);<br />
+  define(</code><code class="php-blue">'HEADER_LOGO_IMAGE'</code><code class="php-black">, </code><code class="php-green">'logo.png'</code><code class="php-black">);</code></p>
+<ol>
+<li>Replace "Dover Fine :: Free Template by www.picaflor-azul.com" with your site name and tag line here</li>
+<li>Replace "235px" with your logo width</li>
+<li>Replace "60px" with your logo height</li>
+<li>Replace "logo.png" with the name of your logo image</li>
+</ol>
+<p class="white-bk"> <code class="php-black">define(</code><code class="php-blue">'HEADER_ALT_TEXT'</code><code class="php-black">, </code><code class="php-green">'Your store name :: your store tag line'</code><code class="php-black">);<br />
+  define(</code><code class="php-blue">'HEADER_LOGO_WIDTH'</code><code class="php-black">, </code><code class="php-green">'height in px'</code><code class="php-black">);<br />
+  define(</code><code class="php-blue">'HEADER_LOGO_HEIGHT'</code><code class="php-black">, </code><code class="php-green">'width in px'</code><code class="php-black">);<br />
+  define(</code><code class="php-blue">'HEADER_LOGO_IMAGE'</code><code class="php-black">, </code><code class="php-green">'your logo name .png'</code><code class="php-black">);</code></p>
+<p><span class="red">***This is a php file and MUST be edited in a plain text editor. If you try to edit this file in any type of wysiwyg editor, the code will be corrupted and when you insert the file back into your zen cart it will break your entire site.***</span></p>
+</div>
+</div>
+
+<div class="wrapper">
+<div class="border-left">
+	<h1 id="inine">Add Your Tag Line/Slogan:</h1>
+</div>
+<div class="grey">
+<p class="white green-video">
+<a href="http://www.picaflor-azul.com/index.php?main_page=product_music_info&amp;cPath=120_124&amp;products_id=14724" target="_blank">Watch an Easy Help Zen Cart Video Tutorial of this step HERE.</a>
+</p>
+<p>
+In your favorite plain text editor, open the <span class="red">includes/languages/english/dover_fine/header.php</span>.  
+</p>
+<p>On or around line 25 find this code:</p>
+<p class="white-bk"><code class="php-black">define(</code><code class="php-blue">'HEADER_SALES_TEXT'</code><code class="php-black">,</code><code class="php-green"> 'A Free Template by www.picaflor-azul.com.'</code><code class="php-black">);</code></p>
+<p>Change the text in green to your site tagline, or remove it for no tagline.  Be sure to keep the single quotes intact.</p>
+<p class="white-bk"><code class="php-black">define(</code><code class="php-blue">'HEADER_SALES_TEXT'</code><code class="php-black">,</code><code class="php-green"> 'Your site tagline goe here.'</code><code class="php-black">);</code></p>
+<p>Save the file.</p>
+<p><span class="red">***This is a php file and MUST be edited in a plain text editor. If you try to edit this file in any type of wysiwyg editor, the code will be corrupted and when you insert the file back into your zen cart it will break your entire site.***</span></p>
+</div>		
+</div>
+
+<div class="wrapper">
+<div class="border-left">
+	<h1 id="iten">Home Page Slideshow:</h1>
+Advertise your products, highlight customer service
+</div>
+<h1 id="ieleven">Add Your Images and Links</h1>
+
+<div class="grey">
+<p> 
+In your zen cart admin go to <span class="red">Tools -> Banner Manager</span>.
+</p> 
+<p> 
+<img src="http://www.picaflor-azul.com/pica/images/banners.jpg" title="Easy Help Zen Cart Tutorial&trade;: How to Set Up a Banner Ad" alt="banners Easy Help Zen Cart Tutorial&trade;: How to Set Up a Banner Ad" /> 
+</p> 
+<p>
+Click on any of the banners in the "homepageslide" banner group.
+</p>
+<p>
+Click on the "edit" button
+</p>
+<p>
+<img src="http://www.picaflor-azul.com/pica/install/win-banners.jpg" title="Easy Help Zen Cart Tutorial&trade;: How to Set Up a Banner Ad" alt="banners Easy Help Zen Cart Tutorial&trade;: How to Set Up a Banner Ad" /> 
+</p>
+<p>
+Select "Banner New Window" Yes, or No, enter your Banner Title (this will be the banner caption),  enter your Banner URL in the text box, and Click on the "browse" or "choose file" button and select your image.
+</p>
+<p>
+Click on the "update" button.
+</p>
+<p>
+Add as many banners to the slide show as you like.  Just be sure to use the banner group "homepageslide".
+</p>
+<p>
+<img src="http://www.picaflor-azul.com/pica/install/slide1-banner1.jpg" title="Easy Help Zen Cart Tutorial&trade;: How to Set Up a Banner Ad" alt="banners Easy Help Zen Cart Tutorial&trade;: How to Set Up a Banner Ad" /> 
+</p>
+</div>
+
+
+	<h1 id="sstwo">Disable the Slide Show</h1>
+</div>
+<div class="grey">
+<p>
+In your zen cart admin go to <span class="red">Configuration -> Dover Fine</span>
+</p>
+<p>
+<img src="http://www.picaflor-azul.com/pica/install/res-all-business-menu.jpg" title="Dover Fine" alt="Dover Fine" />
+</p>
+<p>
+Click on "Home Page Slideshow".
+</p>
+<p>
+Enter "false" and click on the "update" button.
+</p>
+</div>
+
+
+<div class="border-left">
+<h1 id="ftwo">Customize Social Media Links</h1>
+</div>
+<div class="grey">
+<p>
+In a your favorite plain text editor, open <span class="red">includes/languages/english/extra_definitions/dover_fine/blank_sidebox_defines.php</span> and find the following code:
+</p>
+<p class="white-bk">
+<code>
+define('TEXT_BLANK_SIDEBOX', '&lt;a href="<span class="red">https://www.facebook.com/Custom.Zen.Cart.Design</span>" target="_blank"&gt;&lt;i class="fa fa-facebook"&lt;&gt;/i&gt;&lt;/a&gt;&lt;a href="<span class="red">https://twitter.com/picaflorazul</span>" target="_blank"&gt;&lt;i class="fa fa-twitter"&gt;&lt;/i&gt;&lt;/a&gt;&lt;a href="<span class="red">http://www.pinterest.com/picaflorazul</span>" target="_blank"&gt;&lt;i class="fa fa-pinterest"&gt;&lt;/i&gt;&lt;/a&gt;&lt;a href="<span class="red">https://www.youtube.com/user/ZenCartEasyHelp</span>" target="_blank"&gt;&lt;i class="fa fa-youtube"&gt;&lt;/i&gt;&lt;/a&gt;&lt;a href="<span class="red">instagram.com</span>" target="_blank"&lt;&gt;i class="fa fa-instagram"&gt;&lt;/i&gt;&lt;/a&gt;');
+</code>
+</p>
+<p>
+Change the social media urls to your urls.  You can also remove icons you do not want to use, or rearrange the order of the icons.
+</p>
+</div>
+
+<div class="wrapper">
+<div class="border-left">
+	<h1 id="ififteen-c">Product Info Page Tabs</h1>
+	</div>
+<div class="grey">
+<p>
+To customize the tab titles used for "description", "details", and "reviews"  in the product info page tabbed content, open the <span class="red">includes/langauges/english/extra_definitions/dover_fine/dover_fine_defines.php</span> in your favorite plain text editor.
+</p>
+<p>
+Find this code:
+</p>
+<p class="white-bk">
+<code>
+/*bof product info tabs*/<br />
+define('HEADER_TITLE_DESCRIPTION','<span class="red">Description</span>');<br />
+define('HEADER_TITLE_DETAILS','<span class="red">Details</span>');<br />
+define('HEADER_TITLE_REVIEWS','<span class="red">Reviews</span>');<br />
+define('TEXT_FIRST_REVIEW','<span class="red">&lt;div class="review-first"&gt;Be the first to write a review.&nbsp;&nbsp;&lt;/span&gt;');<br />
+define('TEXT_FIRST_REVIEW_WRITE','<span class="red">&lt;span class="review-first-write"&gt;Write a Review.&lt;/span&gt;&lt;/div&gt;</span>');<br />
+</code>
+</p>
+<p>
+Change the part in red, between the single quotes to your content.
+</p>
+<p>
+To customize the content and title of the "Custom Tab", go to <span class="red">Admin--Tools--Banner Manager</span>
+</p>
+<p> 
+<img src="http://www.picaflor-azul.com/pica/images/banners.jpg" title="Easy Help Zen Cart Tutorial&trade;: How to Set Up a Banner Ad" alt="banners Easy Help Zen Cart Tutorial&trade;: How to Set Up a Banner Ad" /> 
+</p> 
+<p>
+Click on any of the banners in the "homepageslide" banner group.
+</p>
+<p>
+Click on the "edit" button
+</p>
+<p>
+<img src="http://www.picaflor-azul.com/pica/install/customtab.jpg" title="Easy Help Zen Cart Tutorial&trade;: How to Set Up a Banner Ad" alt="banners Easy Help Zen Cart Tutorial&trade;: How to Set Up a Banner Ad" /> 
+</p>
+<p>
+Enter your Banner Title (this will be the tab title),  and enter your content into the HTML Text area.
+</p>
+<p>
+Click on the "update" button.
+</p>
+<p>
+<img src="http://www.picaflor-azul.com/pica/install/customtab1.jpg" title="Easy Help Zen Cart Tutorial&trade;: How to Set Up a Banner Ad" alt="banners Easy Help Zen Cart Tutorial&trade;: How to Set Up a Banner Ad" /> 
+</p>
+
+
+	</div>
+</div>
+
+
+
+
+
+
+<div class="wrapper">
+<div class="border-left">
+	<h1 id="ififteen">To Un-Install the Template:</h1>
+	</div>
+<div class="grey">
+<p>
+Remove all files in the template package.
+</p>
+<p>
+Restore your back ups of the core overwrite files.
+</p>
+	</div>
+</div>
+
+<div class="wrapper">
+<div class="border-left">
+	<h1 id="iseventeen">Easy Help Zen Cart Tutorials Index:</h1>
+	</div>
+<div class="grey">
+<p class="white green-video">
+<a href="http://www.picaflor-azul.com/index.php?main_page=page&id=43" target="_blank">Click here for hundreds of video and written Zen Cart Tutorials</a>
+</p>
+</div>
+</div>
+
+
+<div class="wrapper">
+<div class="border-left">
+	<h1 id="isixteen">Files Included in the Template Package:</h1>
+	</div>
+<div class="grey">
+YOUR_ADMIN_FOLDER/layout_controller.php
+<br />
+YOUR_ADMIN_FOLDER/includes/auto_loaders/config.dover_fine.php
+<br />
+YOUR_ADMIN_FOLDER/includes/extra_datafiles/admin_config_menu_zca_responsive_template_switch.php
+<br />
+YOUR_ADMIN_FOLDER/includes/extra_datafiles/dover_fine.php
+<br />
+YOUR_ADMIN_FOLDER/includes/init_includes/init_dover_fine.php
+<br />
+YOUR_ADMIN_FOLDER/includes/installers/dover_fine/1_0.php
+<br />
+YOUR_ADMIN_FOLDER/includes/languages/english/extra_definitions/dover_fine.php
+<br />
+images/banners/*
+<br />
+includes/init_includes/config.display_mode.php
+<br />
+includes/classes/Mobile_Detect.php
+<br />
+includes/classes/split_page_results.php
+<br />
+includes/extra_datafiles/about_us_filenames.php
+<br />
+includes/init_includes/init_display_mode.php
+<br />
+includes/languages/dover_fine/english.php
+<br />
+includes/languages/english/dover_fine/aboutus.php
+<br />
+includes/languages/english/dover_fine/account_newsletters.php
+<br />
+includes/languages/english/dover_fine/account.php
+<br />
+includes/languages/english/dover_fine/address_book.php
+<br />
+includes/languages/english/dover_fine/address_book_process.php
+<br />
+includes/languages/english/dover_fine/button_names.php 
+<br />
+includes/languages/english/dover_fine/checkout_confirmation.php
+<br />
+includes/languages/english/dover_fine/checkout_payment.php
+<br />
+includes/languages/english/dover_fine/checkout_shipping.php
+<br />
+includes/languages/english/dover_fine/checkout_success.php
+<br />
+includes/languages/english/dover_fine/contact_us.php
+<br />
+includes/languages/english/dover_fine/header.php
+<br />
+includes/languages/english/dover_fine/icon_names.php
+<br />
+includes/languages/english/dover_fine/index.php
+<br />
+includes/languages/english/dover_fine/metatags.php
+<br />
+includes/languages/english/dover_fine/other_images_names.php
+<br />
+includes/languages/english/dover_fine/product_info.php
+<br />
+includes/languages/english/dover_fine/shopping_cart.php
+<br />
+includes/languages/english/html_includes/define_about_us.php
+<br />
+includes/languages/english/html_includes/dover_fine/define_about_us.php
+<br />
+includes/languages/english/html_includes/dover_fine/define_main_page.php
+<br />
+includes/languages/english/extra_definitions/dover_fine/dover_fine.php
+<br />
+includes/languages/english/extra_definitions/dover_fine/about_us.php
+<br />
+includes/languages/english/extra_definitions/dover_fine/column_layout_grid_defines.php
+<br />
+includes/modules/sideboxes/dover_fine/best_sellers.php
+<br />
+includes/modules/sideboxes/dover_fine/ezpages_drop_menu.php
+<br />
+includes/modules/sideboxes/dover_fine/information.php
+<br />
+includes/modules/sideboxes/dover_fine/more_information.php
+<br />
+includes/modules/pages/about_us/header_php.php
+<br />
+includes/modules/pages/featured_products/header_php.php
+<br />
+includes/modules/pages/product_reviews/header_php.php
+<br />
+includes/modules/pages/products_all/header_php.php
+<br />
+includes/modules/pages/products_new/header_php.php
+<br />
+includes/modules/pages/reviews/header_php.php
+<br />
+includes/modules/pages/specials/header_php.php
+<br />
+includes/modules/dover_fine/also_purchased_products.php
+<br />
+includes/modules/dover_fine/category_row.php
+<br />
+includes/modules/dover_fine/column_right.php
+<br />
+includes/modules/dover_fine/column_left.php
+<br />
+includes/modules/dover_fine/featured_products.php
+<br />
+includes/modules/dover_fine/new_products.php
+<br />
+includes/modules/dover_fine/product_listing.php
+<br />
+includes/modules/dover_fine/specials_index.php
+<br />
+includes/templates/dover_fine/template_info.php
+<br />
+includes/templates/dover_fine/common/html_header.php
+<br />
+includes/templates/dover_fine/common/responsive_default.php
+<br />
+includes/templates/dover_fine/common/responsive_mobile.php 
+<br />
+includes/templates/dover_fine/common/responsive_tablet.php 
+<br />
+includes/templates/dover_fine/common/tpl_box_default_left.php
+<br />
+includes/templates/dover_fine/common/tpl_box_default_right.php
+<br />
+includes/templates/dover_fine/common/tpl_footer.php
+<br />
+includes/templates/dover_fine/common/tpl_header_mobile.php 
+<br />
+includes/templates/dover_fine/common/tpl_header.php
+<br />
+includes/templates/dover_fine/common/tpl_header_tablet.php
+<br />
+includes/templates/dover_fine/common/tpl_home_slider.php
+<br />
+includes/templates/dover_fine/common/tpl_main_page.php
+<br />
+includes/templates/dover_fine/sideboxes/tpl_best_sellers.php
+<br />
+includes/templates/dover_fine/sideboxes/tpl_categories.php
+<br />
+includes/templates/dover_fine/sideboxes/tpl_document_categories.php
+<br />
+includes/templates/dover_fine/sideboxes/tpl_ezpages_drop_menu.php
+<br />
+includes/templates/dover_fine/sideboxes/tpl_ezpages.php
+<br />
+includes/templates/dover_fine/sideboxes/tpl_featured.php
+<br />
+includes/templates/dover_fine/sideboxes/tpl_information.php
+<br />
+includes/templates/dover_fine/sideboxes/tpl_more_information.php
+<br />
+includes/templates/dover_fine/sideboxes/tpl_reviews_random.php
+<br />
+includes/templates/dover_fine/sideboxes/tpl_search_header.php
+<br />
+includes/templates/dover_fine/sideboxes/tpl_search.php
+<br />
+includes/templates/dover_fine/sideboxes/tpl_specials.php
+<br />
+includes/templates/dover_fine/sideboxes/tpl_whats_new.php
+<br />
+includes/templates/dover_fine/templates/tpl_about_us_default.php
+<br />
+includes/templates/dover_fine/templates/tpl_advanced_search_default.php 
+<br />
+includes/templates/dover_fine/templates/tpl_advanced_search_result_default.php
+<br />
+includes/templates/dover_fine/templates/tpl_contact_us_default.php
+<br />
+includes/templates/dover_fine/templates/tpl_dgReview.php
+<br />
+includes/templates/dover_fine/templates/tpl_featured_products_default.php 
+<br />
+includes/templates/dover_fine/templates/tpl_index_product_list.php
+<br />
+includes/templates/dover_fine/templates/tpl_modules_featured_products.php
+<br />
+includes/templates/dover_fine/templates/tpl_modules_main_product_image.php
+<br />
+includes/templates/dover_fine/templates/tpl_modules_mobile_categories_tabs.php
+<br />
+includes/templates/dover_fine/templates/tpl_modules_product_listing.php
+<br />
+includes/templates/dover_fine/templates/tpl_modules_shipping_estimator.php 
+<br />
+includes/templates/dover_fine/templates/tpl_product_info_display.php
+<br />
+includes/templates/dover_fine/templates/tpl_product_reviews_default.php
+<br />
+includes/templates/dover_fine/templates/tpl_product_reviews_write_default.php
+<br />
+includes/templates/dover_fine/templates/tpl_products_all_default.php  
+<br />
+includes/templates/dover_fine/templates/tpl_products_new_default.php
+<br />
+includes/templates/dover_fine/templates/tpl_reviews_default.php
+<br />
+includes/templates/dover_fine/templates/tpl_shopping_cart_default.php
+<br />
+includes/templates/dover_fine/templates/tpl_site_map_default.php
+<br />
+includes/templates/dover_fine/templates/tpl_specials_default.php
+<br />
+includes/templates/dover_fine/css/index_home.css
+<br />
+includes/templates/dover_fine/css/responsive.css
+<br />
+includes/templates/dover_fine/css/responsive_default.css
+<br />
+includes/templates/dover_fine/css/responsive_mobile.css
+<br />
+includes/templates/dover_fine/css/responsive_tablet.css
+<br />
+includes/templates/dover_fine/css/stylesheet.css
+<br />
+includes/templates/dover_fine/css/stylesheet_supersized.css
+<br />
+includes/templates/dover_fine/css/stylesheet_supersized_shutter.css
+<br />
+includes/templates/dover_fine/css/stylesheet_responsive_tabs.css
+<br />
+includes/templates/dover_fine/jscript/back_to_top_min.js
+<br />
+includes/templates/dover_fine/jscript/css_browser_selector.js
+<br />
+includes/templates/dover_fine/jscript/easyResponsiveTabs.js 
+<br />
+includes/templates/dover_fine/jscript/jquery.slimmenu.min.js
+<br />
+includes/templates/dover_fine/jscript/supersized.shutter.min.js
+<br />
+includes/templates/dover_fine/jscript/supersized.3.2.7.min.js
+<br />
+includes/templates/dover_fine/jscript/jscript_jquery.min.js
+
+	</div>
+</div>
+
+<div class="wrapper">
+<div class="border-left">
+<h1 id="four">Credits &amp; License</h1>
+People who make this project possible
+</div>
+<div class="left grey">
+<span class="red">Special Thanks:</span>
+<ul class="no-dot">     
+<li>The Zen Cart Team</li>
+<li>rbarbour and the Responsive DIY Template Default for 1.5.x</li>
+<li>The jQuery Foundation</li>
+<li>Supersized http://buildinternet.com/project/supersized</li>
+<li>stevefriedman71 and DrByte for the Column Layout Grid Module</li>
+<li>torvista and DrByte for the About Us Page Module</li>
+<li>Glen Herbert and ginginca for the Shopping Cart Totals In Header</li>
+<li>AddThis Social Bookmarking</li>
+<li>Rafael Lima for the CSS Browser Selector http://rafael.adm.br/css_browser_selector</li>
+<li>Easy Responsive Tabs Plugin Author: Samson.Onna samson3d@gmail.com</li>
+<li>jquery.slimmenu.js http://adnantopal.github.io/slimmenu/</li>
+<li>Back to Top www.myjqueryplugins.com - www.alpixel.fr</li>
+<li>http://www.publicdomainpictures.net Petr Kratochvil</li>
+<li>Pauls Bestsellers thumbnail images</li>
+<li>stellarweb Contact Us - Add Subject</li>
+<li>Michael Duvall dgReviews</li>
+<li>Flyout Sidebar Category Menu by samwilson3d</li>
+<li>Bigstockphoto.com</li>
+<li>Font Awesome http://fortawesome.github.io/Font-Awesome</li>
+</ul>
+</div>
+<div class="right grey">
+<p>
+The Dover Fine Free Zen Cart Template is released under the General Public License (see LICENSE.txt)
+</p>
+<p>
+This script is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+</p>
+<p>
+Always backup your shop and database before making changes.
+</p>
+</div>
+<div class="clearBoth"></div>
+</div>
+
+<div class="wrapper">
+<div class="border-left">
+<h1 id="five" >Free Zen Cart Templates and Modules by Picaflor Azul</h1>
+Start your ecommerce site on a shoestring
+</div>
+<div class="grey">
+<p class="white green-video">
+<a href="http://www.picaflor-azul.com/free-zen-cart-templates-plugins" target="_blank">Click here for FREE Zen Cart Templates and Modules</a>
+</p>
+</div>
+
+<div class="wrapper">
+<div class="border-left">
+<h1 id="six">Bugs &amp; Updates</h1>
+Help us to continually improve the package
+</div>
+<div class="left center">
+<a href="http://www.picaflor-azul.com/index.php?main_page=contact_us"><img src="http://www.picaflor-azul.com/pica/install/email.png" alt="email"  /></a>
+<br />
+<a href="http://www.picaflor-azul.com/index.php?main_page=contact_us">Contact us to report problems.</a>
+</div>
+<div class="right grey">
+05/30/2014-------First Release 1.0
+</div>
+<div class="clearBoth"></div>
+
+</div>
+
+
+</div>
+</div>
+</div>
+</body>
+</html>
